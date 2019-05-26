@@ -73,9 +73,15 @@ body {
 .article-header-div h4 {
     display: inline-block;
     color: white;
+    margin-bottom: 0px;
 }
 
 .fav-btn {
+    float: left;
+    margin-left: 10px;
+}
+
+.remove-favorite {
     float: left;
     margin-left: 10px;
 }
@@ -97,7 +103,7 @@ body {
     text-decoration: none;
 }
 
-#comments-div {
+.comments-div {
     display: none;
 }
 

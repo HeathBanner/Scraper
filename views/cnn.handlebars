@@ -44,25 +44,29 @@
                             
                             <a href="http://cnn.com{{link}}" target="_blank"><h2>{{header}}</h2></a>
                             
-                            <button id="toggle-comments">Show Comments</button>
+                            <div class="comment-container">
+                                
+                                <button class="toggle-comments">Show Comments</button>
 
-                            <div id="comments-div">
-                                {{#each comments}}
-                                <div class="comment-body">
-                                    <p>{{username}}: {{comment}}</p>
-                                    {{#if isUser}}
-                                    <i class="fas fa-sm fa-times delete-btn" data-userId="{{id}}" data-articleId="{{articleId}}" data-comment="{{comment}}"></i>
-                                    {{/if}}
+                                <div class="comments-div">
+                                    {{#each comments}}
+                                    <div class="comment-body">
+                                        <p>{{username}}: {{comment}}</p>
+                                        {{#if isUser}}
+                                        <i class="fas fa-sm fa-times delete-btn" data-userId="{{id}}" data-articleId="{{articleId}}" data-comment="{{comment}}"></i>
+                                        {{/if}}
+                                    </div>
+                                    {{/each}}
+
+                                <form class="comment-form" data-id={{_id}}>
+                                    
+                                    <input type="text" class="comment-input comment" data-header="{{header}}" data-link="{{link}}" data-name="{{img}}" data-region="{{region}}" data-regionLink="{{regionLink}}">
+                                    
+                                    <input type="submit" value="Submit">
+
+                                </form>
                                 </div>
-                                {{/each}}
-
-                            <form class="comment-form" data-id={{_id}}>
                                 
-                                <input type="text" class="comment-input comment" data-header="{{header}}" data-link="{{link}}" data-name="{{img}}" data-region="{{region}}" data-regionLink="{{regionLink}}">
-                                
-                                <input type="submit" value="Submit">
-
-                            </form>
                             </div>
 
                         </div>

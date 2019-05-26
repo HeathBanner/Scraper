@@ -100,19 +100,13 @@ function cnnScraper(res, url) {
     
         var results = [];
 
-        // Grab the region link per article
         if (url === 'world') {
             worldArticleLogic(response, results, WorldResult);
         } else if (url === 'us') {
             usArticleLogic(response, results, UsResult);
         }
-        // console.log(results)
 
-
-        hbs_obj = {
-            results: results
-        }
-        res.render('cnn', hbs_obj);
+        res.redirect('/cnn');
     }); 
 }
 
@@ -197,6 +191,13 @@ router.get('/favorites', ensureAuthenticated, function(req, res) {
             results: result[0].favs
         };
         res.render('favorites', data);
+    });
+});
+
+router.post('/removeFavorite', ensureAuthenticated, function(req, res) {
+    User.findOneAndUpdate({'favs.header': req.body.header},{$pull: {'favs':{'header': req.body.header}}},{new: true}, function(err, result) {
+        console.log(result);
+        res.json(result);
     });
 });
 

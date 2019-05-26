@@ -32,6 +32,6 @@ $('.delete-btn').on('click', function() {
     });
 });
 
-$('#toggle-comments').on('click', function() {
-    $('#comments-div').toggle();
+$('.toggle-comments').on('click', function() {
+    $(this).parent().children('.comments-div').toggle();
 });
