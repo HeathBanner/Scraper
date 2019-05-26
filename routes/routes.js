@@ -14,7 +14,8 @@ var { ensureAuthenticated} = require('../config/auth.js');
 const ObjectId = mongoose.Types.ObjectId;
 require('../config/passport')(app);
 
-mongoose.connect("mongodb://localhost/scrapeyboi", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapeyboi";
+mongoose.connect(MONGODB_URI);
 
 app.use(express.static(__dirname + '/public'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
