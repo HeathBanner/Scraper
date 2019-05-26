@@ -1,0 +1,52 @@
+body {
+    background: url('../../imgs/roya-ann-miller.jpg');
+    background-size: cover;
+}
+
+#signup-body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255, 0.6);
+    background: rgb(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.8);
+    border-radius: 5px;
+    width: 60vw;
+}
+
+#signup-form {
+    text-align: center;
+    padding: 20px;
+}
+
+#signup-form label, input {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: bold;
+    color: white;
+}
+
+#signup-form label {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 24px;
+}
+
+#signup-form input {
+    font-family: 'Special Elite', cursive;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    padding: 5px 10px;
+}
+
+#signup-body a:link, a:visited{
+    display: block;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#signup-body a:hover {
+    text-decoration: none;
+}

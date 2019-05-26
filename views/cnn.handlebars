@@ -1,0 +1,83 @@
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/cnn/cnn.css">
+    
+    <title>CNN</title>
+
+</head>
+
+<body>
+
+    <div id="article-modal">
+        <i id="close-btn" class="fas fa-2x fa-times"></i>
+        <div id="article-body">
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div id="scraper-body">
+
+                    <div id="header-div">
+                        <h1 id="app-title">Scrapey Boi</h1>
+                    </div>
+
+                    <a href="/"><button id="home">Home</button></a>
+                    <a href="/us_cnn"><button id="us-scraper">Scrape US</button></a>
+                    <a href="/world_cnn"><button id="world-scraper">Scrape World</button></a>
+
+                    <div id="info-body">
+
+                    {{#each results}}
+                        <div class="article" data-name="{{region}}">
+
+                            <div class="article-header-div">
+                                <i class="fas fa-2x fa-heart fav-btn" data-region="{{region}}" data-regionLink="{{regionLink}}" data-img="{{img}}" data-header="{{header}}" data-link="{{link}}"></i>
+                                <a href="http://cnn.com{{regionLink}}" target="_blank"><h4>{{region}}</h4></a>
+                            </div>
+
+                            <img src="http:{{img}}">
+                            
+                            <a href="http://cnn.com{{link}}" target="_blank"><h2>{{header}}</h2></a>
+                            
+                            <button id="toggle-comments">Show Comments</button>
+
+                            <div id="comments-div">
+                                {{#each comments}}
+                                <div class="comment-body">
+                                    <p>{{username}}: {{comment}}</p>
+                                    {{#if isUser}}
+                                    <i class="fas fa-sm fa-times delete-btn" data-userId="{{id}}" data-articleId="{{articleId}}" data-comment="{{comment}}"></i>
+                                    {{/if}}
+                                </div>
+                                {{/each}}
+
+                            <form class="comment-form" data-id={{_id}}>
+                                
+                                <input type="text" class="comment-input comment" data-header="{{header}}" data-link="{{link}}" data-name="{{img}}" data-region="{{region}}" data-regionLink="{{regionLink}}">
+                                
+                                <input type="submit" value="Submit">
+
+                            </form>
+                            </div>
+
+                        </div>
+                    {{/each}}
+                    
+                    </div>
+
+                </div>
+                </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+
+    <script src="js/cnn/cnn.js"></script>
+    <script src="js/comment.js"></script>
+
+</body>
+

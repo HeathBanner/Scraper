@@ -1,0 +1,51 @@
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home/home.css">
+    
+    <title>Home</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div id="scraper-body">
+
+                    <div id="title-div">
+                        <h1 id="app-title">Scrapey Boi</h1>
+                    </div>
+                    
+                    <div id="btn-div">
+                        <a href="/favorites"><button id="favs">Favorites</button></a>
+                        <a href="/cnn"><div id="cnn-btn"></div></a>
+                        <a href="#"><button id="commented">Commented</button></a>
+                    </div>
+
+                    <div id="info-body">
+
+                    {{#each results}}
+                        <div class="article">
+                            <a href="http://cnn.com{{regionLink}}" target="_blank"><h4>{{region}}</h4></a>
+                            <img src="http:{{img}}">
+                            <a href="http://cnn.com{{link}}" target="_blank"><h2>{{header}}</h2></a>
+                            <form action="/comment" method="POST">
+                                <input type="text" class="comment-input" data-header="{{header}}" data-link="{{link}}" data-name="{{img}}" data-region="{{region}}" data-regionLink="{{regionLink}}">
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    {{/each}}
+                    
+                    </div>
+
+                </div>
+                </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+
+    <script src="typed.js/lib/typed.js"></script>
+    <script src="js/home/home.js"></script>
+</body>
+

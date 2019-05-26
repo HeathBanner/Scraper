@@ -1,0 +1,104 @@
+
+body {
+    background: url('../../imgs/soumyadeep.jpg');
+    background-size: cover;
+}
+
+#scraper-body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    background: rgb(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 30px rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+#title-div span, h1 {
+    display: inline-block;
+}
+
+#app-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#cnn-btn {
+    display: inline-block;
+    height: 60px;
+    width: 120px;
+    background: url('../../imgs/cnn.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+#btn-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+#btn-div a {
+    margin: 0px 20px;
+}
+
+#btn-div button {
+    display: inline-block;
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+#info-body {
+    /* background: rgb(255, 255, 255, 0.6); */
+    border-radius: 5px;
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.article {
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 5px;
+    font-family: 'Special Elite', cursive;
+}
+
+.article:nth-child(1n+2) {
+    margin-top: 20px;
+}
+
+.article h4 {
+    background: rgb(40, 40, 40, 0.9);
+    border-radius: 5px 5px 0px 0px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+.article img {
+    height: 100%;
+    width: auto;
+}
+
+.article h2 {
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 0px 0px 5px 5px;
+    margin: 0px 0px;
+    padding: 15px 15px 20px 15px;
+}
+
+.article a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}

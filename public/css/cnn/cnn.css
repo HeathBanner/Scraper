@@ -1,0 +1,134 @@
+
+body {
+    background: url('../../imgs/soumyadeep.jpg');
+    background-size: cover;
+}
+
+#scraper-body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 20px;
+    width: 80vw;
+    height: 80vh;
+    text-align: center;
+}
+
+#title-div span, h1 {
+    display: inline-block;
+}
+
+#app-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#scraper-body button {
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+#info-body {
+    /* background: rgb(255, 255, 255, 0.6); */
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    margin-top: 30px;
+    height: 60vh;
+    width: 75vw;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.article {
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 5px;
+    font-family: 'Special Elite', cursive;
+}
+
+.article:nth-child(1n+2) {
+    margin-top: 20px;
+}
+
+.article-header-div {
+    background: rgb(40, 40, 40, 0.9);
+    border-radius: 5px 5px 0px 0px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+.article-header-div h4 {
+    display: inline-block;
+    color: white;
+}
+
+.fav-btn {
+    float: left;
+    margin-left: 10px;
+}
+
+.article img {
+    height: 100%;
+    width: auto;
+}
+
+.article h2 {
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 0px 0px 5px 5px;
+    margin: 0px 0px;
+    padding: 15px 15px 20px 15px;
+}
+
+.article a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+#comments-div {
+    display: none;
+}
+
+.comment-body p {
+    display: inline-block;
+}
+
+.delete-btn {
+    margin-left: 10px;
+}
+
+#article-modal {
+    display: none;
+    z-index: 0;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 80vw;
+    overflow: hidden;
+    overflow: scroll;
+    text-align: center;
+}
+
+.article.active {
+    background: rgb(255, 255, 255, 1);
+}
+
+#close-btn:hover {
+    cursor: pointer;
+}
