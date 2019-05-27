@@ -48,9 +48,7 @@ module.exports = (app) => {
     console.log(username);
     Users.find({username: username})
       .then(function(user) {
-        console.log(user);
-        console.log(user[0].password);
-        if (!user) {
+        if (user < 1) {
           return done(null, false, {message: errorMsg});
         }
         return authUser.validatePassword(user, password)
