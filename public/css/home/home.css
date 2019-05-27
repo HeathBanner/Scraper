@@ -1,6 +1,9 @@
 
 body {
-    background: url('../../imgs/soumyadeep.jpg');
+    background: url('../../imgs/julius-drost.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
