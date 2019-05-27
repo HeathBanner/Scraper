@@ -23,7 +23,6 @@ var UserSchema = new Schema({
     },
     favs: {
         type: Array,
-        unique: true,
     },
     isSuperUser: {
         type: Boolean,
