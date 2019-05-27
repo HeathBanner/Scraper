@@ -1,6 +1,6 @@
 
 body {
-    background: url('../../imgs/julius-drost.jpg');
+    background-image: url('../../imgs/julius-drost.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
