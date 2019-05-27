@@ -138,3 +138,22 @@ body {
 #close-btn:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 490px) {
+    #scraper-body {
+        width: 90vw;
+        height: 95vh;
+    }
+
+    #info-body {
+        width: 90vw;
+        height: 75vh;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #scraper-body button {
+        margin: 5px;
+    }
+}
+

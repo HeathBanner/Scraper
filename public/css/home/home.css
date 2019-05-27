@@ -102,3 +102,24 @@ body {
     color: black;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 910px) {
+    #scraper-body {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        background: rgb(255, 255, 255, 0.6);
+        box-shadow: 0px 0px 30px rgb(255, 255, 255, 0.3);
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;    
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    #btn-div #commented {
+        display: none;
+    }
+}
