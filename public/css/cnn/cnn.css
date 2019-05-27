@@ -1,6 +1,9 @@
 
 body {
     background: url('../../imgs/soumyadeep.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -39,7 +42,6 @@ body {
 }
 
 #info-body {
-    /* background: rgb(255, 255, 255, 0.6); */
     position: fixed;
     top: 55%;
     left: 50%;
@@ -53,7 +55,7 @@ body {
 }
 
 .article {
-    background: rgb(255, 255, 255, 0.6);
+    background: rgb(255, 255, 255, 1);
     border-radius: 5px;
     font-family: 'Special Elite', cursive;
 }
@@ -76,9 +78,18 @@ body {
     margin-bottom: 0px;
 }
 
+.article-header-div h4:hover {
+    color: rgb(193, 193, 193);
+}
+
 .fav-btn {
     float: left;
     margin-left: 10px;
+}
+
+.fav-btn:hover {
+    cursor: pointer;
+    color: rgb(221, 0, 0);
 }
 
 .remove-favorite {
@@ -92,7 +103,7 @@ body {
 }
 
 .article h2 {
-    background: rgb(255, 255, 255, 0.6);
+    background: rgb(209, 209, 209);
     border-radius: 0px 0px 5px 5px;
     margin: 0px 0px;
     padding: 15px 15px 20px 15px;
@@ -103,6 +114,11 @@ body {
     text-decoration: none;
 }
 
+.toggle-comments {
+    background: rgb(84, 84, 84);
+    color: white;
+}
+
 .comments-div {
     display: none;
 }
@@ -111,8 +127,37 @@ body {
     display: inline-block;
 }
 
+.comment-body:nth-child(odd) {
+    background: rgb(229, 229, 229);
+}
+
+.comment-body:nth-child(even) {
+    background: rgb(244, 244, 244);
+}
+
+.comment-form {
+    padding: 10px 0px;
+    background: rgb(40, 40, 40, 0.7);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.comment-form input {
+    border: none;
+    border-radius: 3px;
+}
+
 .delete-btn {
     margin-left: 10px;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    color: rgb(221, 0, 0);
+}
+
+.remove-favorite:hover {
+    cursor: pointer;
+    color: rgb(221, 0, 0);
 }
 
 #article-modal {
@@ -139,15 +184,22 @@ body {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 610px) {
+    .article img {
+        height: auto;
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 490px) {
     #scraper-body {
         width: 90vw;
-        height: 95vh;
+        height: 85vh;
     }
 
     #info-body {
         width: 90vw;
-        height: 75vh;
+        height: 70vh;
     }
 }
 

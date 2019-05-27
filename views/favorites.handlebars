@@ -41,27 +41,6 @@
                             <img src="http:{{img}}">
                             
                             <a href="http://cnn.com{{link}}" target="_blank"><h2>{{header}}</h2></a>
-                            
-                            <button class="toggle-comments">Show Comments</button>
-
-                            <div class="comments-div">
-                                {{#each comments}}
-                                <div class="comment-body">
-                                    <p>{{username}}: {{comment}}</p>
-                                    {{#if isUser}}
-                                    <i class="fas fa-sm fa-times delete-btn" data-userId="{{id}}" data-articleId="{{articleId}}" data-comment="{{comment}}"></i>
-                                    {{/if}}
-                                </div>
-                                {{/each}}
-
-                            <form class="comment-form" data-id={{_id}}>
-                                
-                                <input type="text" class="comment-input comment" data-header="{{header}}" data-link="{{link}}" data-name="{{img}}" data-region="{{region}}" data-regionLink="{{regionLink}}">
-                                
-                                <input type="submit" value="Submit">
-
-                            </form>
-                            </div>
 
                         </div>
                     {{/each}}
@@ -76,6 +55,7 @@
 
     <script src="js/cnn/cnn.js"></script>
     <script src="js/favs/favorites.js"></script>
+    <script src="js/comment.js"></script>
 
 </body>
 
