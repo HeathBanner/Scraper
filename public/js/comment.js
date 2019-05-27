@@ -5,7 +5,6 @@ $('.comment-form').on('submit', function(event) {
         id: $(this).attr('data-id'),
         comment: $(this).children('.comment').val()
     };
-    console.log(data);
 
     $.ajax({
         url: '/comment',
@@ -22,7 +21,6 @@ $('.delete-btn').on('click', function() {
         articleId: $(this).attr('data-articleId'),
         comment: $(this).attr('data-comment')
     };
-    console.log(data);
     $.ajax({
         url: '/deleteComment',
         method: 'POST',

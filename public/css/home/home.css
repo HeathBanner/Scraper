@@ -1,6 +1,6 @@
 
 body {
-    background-image: url('../../imgs/julius-drost.jpg');
+    background-image: url('../../imgs/julius-drost.png');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -126,4 +126,9 @@ body {
     #btn-div #commented {
         display: none;
     }
+
+    body {
+        background-size: auto 100vh;
+    }
+
 }

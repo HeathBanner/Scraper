@@ -1,5 +1,5 @@
 body {
-    background-image: url('../../imgs/roya-ann-miller.jpg');
+    background-image: url('../../imgs/roya-ann-miller.png');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -60,4 +60,9 @@ body {
     #signup-body {
         width: 90vw;
     }
+
+    body {
+        background-size: auto 100vh;
+    }
+
 }

@@ -7,13 +7,11 @@ $('#signup-form').on('submit', function(event) {
     for (var i in identifiers) {
         data[identifiers[i]] = $('#' + identifiers[i]).val();
     }
-    console.log(data);
     $.ajax({
         url: '/signup',
         method: 'POST',
         data: data
     }).then(function(res) {
-        console.log(res);
         location.replace('/login')
     });
 });

@@ -19,7 +19,6 @@
 // });
 
 $('.fav-btn').on('click', function() {
-    console.log($(this).attr('data-name'));
 
     identifiers = ['region', 'regionLink', 'img', 'header', 'link'];
     data = {};
@@ -27,13 +26,11 @@ $('.fav-btn').on('click', function() {
     for (var i in identifiers) {
         data[identifiers[i]] = $(this).attr('data-' + identifiers[i]);
     }
-    console.log(data);
 
     $.ajax({
         url: '/fav',
         method: 'POST',
         data: data,
     }).then(function(res) {
-        console.log(res);
     });
 });
